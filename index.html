@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Philippine Red Cross - DMS Project Areas</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/leaflet.css" />
+    <link rel="stylesheet" href="css/MarkerCluster.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+  </head>
+
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top navbar-PRC">
+      <div class="navbar-inner">
+        <img class="logo" src="img/PRC_logo.png" />
+        <div>
+          <a class="navbar-brand" href="http://philippineredcross.github.io/"><span class="navbar-brand-PRC">Philippine Red Cross - DMS</span></a>
+        </div>
+      </div>
+    </div>   
+     
+    <div class="container-fluid page-wrap">     
+      <div class="col-sm-7 col-map">
+        <div id="map"></div>
+      </div> <!-- /.col-sm-7 -->
+      <div class="col-sm-5">
+        <div id="infoWrapper">
+          <div class="infoText">
+            <h2>DMS Projects<small> Philippine Red Cross</small></h2>
+            </div>
+            
+            <div class="btn-group">
+              <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                Select a Region <span class="caret"></span>
+              </button>
+              <ul id="dropdown-menu-regions" class="dropdown-menu" role="menu">
+                <li><a href="#" onClick="regionSelect('All Regions'); return false;">All Regions</a></li>
+                <li class="divider"></li>
+              </ul>
+            </div>
+
+            <div class="btn-group">
+              <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                Select a Chapter <span class="caret"></span>
+              </button>
+              <ul id="dropdown-menu-chapters" class="dropdown-menu" role="menu">
+              </ul>
+            </div>
+            <hr>
+            <div>
+              <h3><span id="selectedRegion">All Regions</span></h3>
+              <button class="btn btn-xs btn-zoom" type="button" onClick="zoomOut();"><span class="glyphicon glyphicon-zoom-out"></span> Zoom to Region Extent</button>
+            </div>
+
+            <div id="ambulanceInfo"></div>
+
+          </div>
+  
+          </div>     
+      </div> <!-- /.col-sm-5 -->
+    </div> <!-- /.container-fluid -->
+
+    <div id="footer">
+        <div class="container container-motto">
+          <div class="col-xs-4 col-motto">
+            <span class="motto-white">ALWAYS </span><span class="motto-red">FIRST</span>
+          </div>
+          <div class="col-xs-4 col-motto">
+            <span class="motto-white">ALWAYS </span><span class="motto-red">READY</span>
+          </div>
+          <div class="col-xs-4 col-motto">
+            <span class="motto-white">ALWAYS </span><span class="motto-red">THERE</span>
+          </div>
+        </div>
+      </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/d3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/leaflet.js"></script>
+    <script src="js/leaflet.markercluster-src.js"></script>
+    <script src="js/main.js"></script>
+
+
+
+
+  </body>
+</html>
